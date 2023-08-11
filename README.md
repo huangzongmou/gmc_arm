@@ -4,6 +4,6 @@
 
     mkdir build
     cd build
-    cmake .. -DENABLE_ARM=OFF  //ENABLE_ARM=ON 
+    cmake .. -DENABLE_ARM=OFF 
     make -j8
     ./gmc

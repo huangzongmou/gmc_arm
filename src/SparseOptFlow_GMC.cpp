@@ -75,6 +75,7 @@ void SparseOptFlow_GMC::apply(const cv::Mat &frame_raw) {
         cv::calcOpticalFlowPyrLK(_prev_frame, frame, _prev_keypoints, matched_keypoints, status, err);
     } catch (const cv::Exception &e) {
         std::cout << "Warning: Could not find correspondences for GMC" << std::endl;
+        std::memcpy(Affine_H, Affine_init, sizeof(Affine_H));
         return;
     }
 
